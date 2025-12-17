@@ -1,0 +1,162 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/layout/Header.astro';
+import Footer from '../../components/layout/Footer.astro';
+import FlightSearchForm from '../../components/booking/FlightSearchForm.jsx';
+import FlightResults from '../../components/booking/FlightResults.jsx';
+import flightsData from '../../data/flights.json';
+import type { Flight } from '../../types/flight';
+
+// Get search parameters from URL
+const searchParams = {
+	origin: Astro.url.searchParams.get('origin') || '',
+	destination: Astro.url.searchParams.get('destination') || '',
+	departDate: Astro.url.searchParams.get('departDate') || '',
+	returnDate: Astro.url.searchParams.get('returnDate') || '',
+	passengers: parseInt(Astro.url.searchParams.get('passengers') || '1'),
+	class: Astro.url.searchParams.get('class') || 'economy',
+	tripType: Astro.url.searchParams.get('tripType') || 'round-trip',
+};
+
+// Filter flights based on search params
+const hasSearch = searchParams.origin && searchParams.destination;
+let flights: Flight[] = [];
+
+if (hasSearch) {
+	// Extract airport codes from search params (format: "JFK - New York")
+	const originCode = searchParams.origin.split(' - ')[0];
+	const destCode = searchParams.destination.split(' - ')[0];
+
+	flights = (flightsData as Flight[]).filter((flight) => {
+		return (
+			flight.origin.code === originCode &&
+			flight.destination.code === destCode
+		);
+	});
+}
+---
+
+<Layout
+	title="Book Flight - AIT Airways"
+	description="Search and book flights to destinations worldwide with AIT Airways. Find the best deals and convenient schedules."
+>
+	<Header />
+
+	<main class="min-h-screen bg-gray-50">
+		{/* Hero Section with Search Form */}
+		<section class="bg-gradient-to-r from-primary-600 to-primary-700 py-12">
+			<div class="max-w-screen-xl mx-auto px-4">
+				<h1 class="text-4xl font-bold text-white mb-2 text-center">
+					Book Your Flight
+				</h1>
+				<p class="text-xl text-white/90 mb-8 text-center">
+					Find and book flights to destinations worldwide
+				</p>
+
+				<div class="bg-white rounded-2xl shadow-2xl p-6 md:p-8">
+					<FlightSearchForm client:load />
+				</div>
+			</div>
+		</section>
+
+		{/* Flight Results or Welcome Message */}
+		{hasSearch ? (
+			<FlightResults client:load flights={flights} searchParams={searchParams} />
+		) : (
+			<section class="py-16">
+				<div class="max-w-screen-xl mx-auto px-4 text-center">
+					<svg
+						class="mx-auto h-24 w-24 text-gray-400 mb-6"
+						fill="none"
+						stroke="currentColor"
+						viewBox="0 0 24 24"
+					>
+						<path
+							stroke-linecap="round"
+							stroke-linejoin="round"
+							stroke-width="2"
+							d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+						></path>
+					</svg>
+					<h2 class="text-3xl font-bold text-gray-900 mb-4">
+						Start Your Journey
+					</h2>
+					<p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+						Use the search form above to find flights to your desired destination. We offer flights to over 100 destinations worldwide.
+					</p>
+
+					{/* Quick Tips */}
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-12">
+						<div class="bg-white rounded-lg shadow-md p-6">
+							<svg
+								class="mx-auto h-12 w-12 text-primary-600 mb-4"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+								></path>
+							</svg>
+							<h3 class="text-lg font-semibold text-gray-900 mb-2">
+								Flexible Booking
+							</h3>
+							<p class="text-gray-600 text-sm">
+								Choose from one-way, round-trip, or multi-city flights
+							</p>
+						</div>
+
+						<div class="bg-white rounded-lg shadow-md p-6">
+							<svg
+								class="mx-auto h-12 w-12 text-primary-600 mb-4"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+								></path>
+							</svg>
+							<h3 class="text-lg font-semibold text-gray-900 mb-2">
+								Best Price Guarantee
+							</h3>
+							<p class="text-gray-600 text-sm">
+								Find the lowest fares for your preferred travel dates
+							</p>
+						</div>
+
+						<div class="bg-white rounded-lg shadow-md p-6">
+							<svg
+								class="mx-auto h-12 w-12 text-primary-600 mb-4"
+								fill="none"
+								stroke="currentColor"
+								viewBox="0 0 24 24"
+							>
+								<path
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									stroke-width="2"
+									d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"
+								></path>
+							</svg>
+							<h3 class="text-lg font-semibold text-gray-900 mb-2">
+								24/7 Support
+							</h3>
+							<p class="text-gray-600 text-sm">
+								Our team is available round the clock to assist you
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+		)}
+	</main>
+
+	<Footer />
+</Layout>
