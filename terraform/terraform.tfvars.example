@@ -1,0 +1,11 @@
+# Copy this file to terraform.tfvars and fill in your values
+# DO NOT commit terraform.tfvars to git
+
+project_id       = "your-gcp-project-id"
+project_name     = "ait-airways"
+bucket_name      = "ait-airways-website"  # Must be globally unique
+bucket_location  = "US"
+region           = "us-central1"
+
+# Uncomment and configure for custom domain
+# domain_name = "www.yourairways.com"
