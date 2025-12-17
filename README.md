@@ -7,6 +7,12 @@ A modern, professional airline website built with Astro, React, Tailwind CSS, an
 ![Tailwind](https://img.shields.io/badge/Tailwind-3.4.19-38B2AC?style=flat-square&logo=tailwind-css)
 ![TypeScript](https://img.shields.io/badge/TypeScript-Latest-3178C6?style=flat-square&logo=typescript)
 
+## Live Demo
+
+**🌐 Production Site:** [http://34.49.195.238](http://34.49.195.238)
+
+Deployed on Google Cloud Platform with Cloud CDN and Load Balancer.
+
 ---
 
 ## Quick Start
