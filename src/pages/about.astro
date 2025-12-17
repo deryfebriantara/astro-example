@@ -1,0 +1,274 @@
+---
+import { Image } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/layout/Header.astro';
+import Footer from '../components/layout/Footer.astro';
+---
+
+<Layout
+	title="About Us - AIT Airways"
+	description="Learn about AIT Airways, our commitment to excellence, and our mission to provide world-class air travel experiences."
+>
+	<Header />
+
+	<main>
+		{/* Hero Section */}
+		<section class="relative h-96 bg-gradient-to-r from-primary-600 to-primary-700">
+			<div class="absolute inset-0">
+				<Image
+					src="https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?w=1920&q=80"
+					alt="Airplane"
+					width={1920}
+					height={384}
+					format="webp"
+					quality={80}
+					loading="eager"
+					class="w-full h-full object-cover opacity-20"
+				/>
+			</div>
+			<div class="relative h-full flex items-center justify-center text-center px-4">
+				<div>
+					<h1 class="text-5xl md:text-6xl font-bold text-white mb-4">
+						About AIT Airways
+					</h1>
+					<p class="text-xl text-white/90 max-w-2xl mx-auto">
+						Connecting the world with exceptional service since 2010
+					</p>
+				</div>
+			</div>
+		</section>
+
+		{/* Mission & Vision */}
+		<section class="py-16 bg-white">
+			<div class="max-w-screen-xl mx-auto px-4">
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+					<div>
+						<h2 class="text-3xl font-bold text-gray-900 mb-4">
+							Our Mission
+						</h2>
+						<p class="text-lg text-gray-700 leading-relaxed">
+							At AIT Airways, our mission is to provide safe, reliable, and comfortable air travel to passengers worldwide. We strive to exceed expectations through innovation, exceptional service, and a commitment to sustainability.
+						</p>
+					</div>
+					<div>
+						<h2 class="text-3xl font-bold text-gray-900 mb-4">
+							Our Vision
+						</h2>
+						<p class="text-lg text-gray-700 leading-relaxed">
+							To be the world's most trusted and innovative airline, setting new standards in customer experience, operational excellence, and environmental responsibility. We envision a future where air travel is accessible, sustainable, and extraordinary.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		{/* Stats Section */}
+		<section class="py-16 bg-gray-50">
+			<div class="max-w-screen-xl mx-auto px-4">
+				<h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">
+					AIT Airways by the Numbers
+				</h2>
+				<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+					<div class="text-center">
+						<p class="text-5xl font-bold text-primary-600 mb-2">100+</p>
+						<p class="text-gray-600">Destinations</p>
+					</div>
+					<div class="text-center">
+						<p class="text-5xl font-bold text-primary-600 mb-2">50+</p>
+						<p class="text-gray-600">Aircraft Fleet</p>
+					</div>
+					<div class="text-center">
+						<p class="text-5xl font-bold text-primary-600 mb-2">5M+</p>
+						<p class="text-gray-600">Passengers Annually</p>
+					</div>
+					<div class="text-center">
+						<p class="text-5xl font-bold text-primary-600 mb-2">98%</p>
+						<p class="text-gray-600">On-Time Performance</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		{/* Fleet Information */}
+		<section class="py-16 bg-white">
+			<div class="max-w-screen-xl mx-auto px-4">
+				<h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">
+					Our Modern Fleet
+				</h2>
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+					<div class="bg-gray-50 rounded-xl p-6">
+						<Image
+							src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=400&q=80"
+							alt="Boeing 787"
+							width={400}
+							height={192}
+							format="webp"
+							quality={85}
+							loading="lazy"
+							class="w-full h-48 object-cover rounded-lg mb-4"
+						/>
+						<h3 class="text-xl font-semibold text-gray-900 mb-2">
+							Boeing 787-9 Dreamliner
+						</h3>
+						<p class="text-gray-600 text-sm mb-4">
+							State-of-the-art aircraft featuring advanced cabin technology, fuel efficiency, and passenger comfort.
+						</p>
+						<div class="text-sm text-gray-500">
+							<p>• Capacity: 250 passengers</p>
+							<p>• Range: 14,140 km</p>
+							<p>• Entered service: 2018</p>
+						</div>
+					</div>
+
+					<div class="bg-gray-50 rounded-xl p-6">
+						<Image
+							src="https://images.unsplash.com/photo-1464037866556-6812c9d1c72e?w=400&q=80"
+							alt="Airbus A350"
+							width={400}
+							height={192}
+							format="webp"
+							quality={85}
+							loading="lazy"
+							class="w-full h-48 object-cover rounded-lg mb-4"
+						/>
+						<h3 class="text-xl font-semibold text-gray-900 mb-2">
+							Airbus A350-900
+						</h3>
+						<p class="text-gray-600 text-sm mb-4">
+							Ultra-modern widebody featuring exceptional fuel efficiency and advanced passenger amenities.
+						</p>
+						<div class="text-sm text-gray-500">
+							<p>• Capacity: 315 passengers</p>
+							<p>• Range: 15,000 km</p>
+							<p>• Entered service: 2019</p>
+						</div>
+					</div>
+
+					<div class="bg-gray-50 rounded-xl p-6">
+						<Image
+							src="https://images.unsplash.com/photo-1540962351504-03099e0a754b?w=400&q=80"
+							alt="Airbus A380"
+							width={400}
+							height={192}
+							format="webp"
+							quality={85}
+							loading="lazy"
+							class="w-full h-48 object-cover rounded-lg mb-4"
+						/>
+						<h3 class="text-xl font-semibold text-gray-900 mb-2">
+							Airbus A380
+						</h3>
+						<p class="text-gray-600 text-sm mb-4">
+							The world's largest passenger airliner, offering unparalleled space and comfort for long-haul flights.
+						</p>
+						<div class="text-sm text-gray-500">
+							<p>• Capacity: 525 passengers</p>
+							<p>• Range: 15,200 km</p>
+							<p>• Entered service: 2020</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		{/* Values Section */}
+		<section class="py-16 bg-gray-50">
+			<div class="max-w-screen-xl mx-auto px-4">
+				<h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">
+					Our Core Values
+				</h2>
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+					<div class="bg-white rounded-xl shadow-md p-6 text-center">
+						<div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+							<svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+							</svg>
+						</div>
+						<h3 class="text-lg font-semibold text-gray-900 mb-2">
+							Safety First
+						</h3>
+						<p class="text-gray-600 text-sm">
+							Safety is our top priority in every decision we make and action we take.
+						</p>
+					</div>
+
+					<div class="bg-white rounded-xl shadow-md p-6 text-center">
+						<div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+							<svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5"></path>
+							</svg>
+						</div>
+						<h3 class="text-lg font-semibold text-gray-900 mb-2">
+							Customer Excellence
+						</h3>
+						<p class="text-gray-600 text-sm">
+							Delivering exceptional service and exceeding customer expectations every day.
+						</p>
+					</div>
+
+					<div class="bg-white rounded-xl shadow-md p-6 text-center">
+						<div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+							<svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+							</svg>
+						</div>
+						<h3 class="text-lg font-semibold text-gray-900 mb-2">
+							Sustainability
+						</h3>
+						<p class="text-gray-600 text-sm">
+							Committed to reducing our environmental impact and sustainable operations.
+						</p>
+					</div>
+
+					<div class="bg-white rounded-xl shadow-md p-6 text-center">
+						<div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+							<svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+							</svg>
+						</div>
+						<h3 class="text-lg font-semibold text-gray-900 mb-2">
+							Innovation
+						</h3>
+						<p class="text-gray-600 text-sm">
+							Embracing technology and innovation to enhance the travel experience.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		{/* Contact CTA */}
+		<section class="py-16 bg-gradient-to-r from-primary-600 to-primary-700">
+			<div class="max-w-screen-xl mx-auto px-4 text-center">
+				<h2 class="text-3xl font-bold text-white mb-4">
+					Get in Touch
+				</h2>
+				<p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+					Have questions or need assistance? Our customer service team is available 24/7.
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4 justify-center">
+					<a
+						href="tel:1-800-AIT-AIRWAYS"
+						class="inline-flex items-center justify-center gap-2 bg-white text-primary-600 hover:bg-gray-100 font-semibold px-8 py-3 rounded-lg transition-colors"
+					>
+						<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+						</svg>
+						1-800-AIT-AIRWAYS
+					</a>
+					<a
+						href="mailto:support@aitairways.com"
+						class="inline-flex items-center justify-center gap-2 bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary-600 font-semibold px-8 py-3 rounded-lg transition-colors"
+					>
+						<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+						</svg>
+						Email Us
+					</a>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>
