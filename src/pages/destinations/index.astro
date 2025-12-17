@@ -1,0 +1,111 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Header from '../../components/layout/Header.astro';
+import Footer from '../../components/layout/Footer.astro';
+import DestinationCard from '../../components/destinations/DestinationCard.astro';
+import destinationsData from '../../data/destinations.json';
+import type { Destination } from '../../types/destination';
+
+const destinations = destinationsData as Destination[];
+---
+
+<Layout
+	title="Destinations - AIT Airways"
+	description="Explore our network of over 100 destinations worldwide. Find your next adventure with AIT Airways."
+>
+	<Header />
+
+	<main>
+		{/* Hero Section */}
+		<section class="relative h-96 bg-gradient-to-r from-primary-600 to-primary-700">
+			<div class="absolute inset-0">
+				<img
+					src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?w=1920&q=80"
+					alt="World map"
+					class="w-full h-full object-cover opacity-20"
+				/>
+			</div>
+			<div class="relative h-full flex items-center justify-center text-center px-4">
+				<div>
+					<h1 class="text-5xl md:text-6xl font-bold text-white mb-4">
+						Explore Our Destinations
+					</h1>
+					<p class="text-xl text-white/90 max-w-2xl mx-auto">
+						Discover amazing places around the world with AIT Airways
+					</p>
+				</div>
+			</div>
+		</section>
+
+		{/* Destinations Grid */}
+		<section class="py-16 bg-gray-50">
+			<div class="max-w-screen-xl mx-auto px-4">
+				{/* Filter Options (Static for now) */}
+				<div class="mb-12">
+					<div class="flex flex-wrap gap-3 justify-center">
+						<button class="px-6 py-2 bg-primary-600 text-white rounded-full font-medium hover:bg-primary-700 transition-colors">
+							All Destinations
+						</button>
+						<button class="px-6 py-2 bg-white text-gray-700 rounded-full font-medium hover:bg-gray-100 transition-colors border border-gray-200">
+							Europe
+						</button>
+						<button class="px-6 py-2 bg-white text-gray-700 rounded-full font-medium hover:bg-gray-100 transition-colors border border-gray-200">
+							Asia
+						</button>
+						<button class="px-6 py-2 bg-white text-gray-700 rounded-full font-medium hover:bg-gray-100 transition-colors border border-gray-200">
+							Middle East
+						</button>
+						<button class="px-6 py-2 bg-white text-gray-700 rounded-full font-medium hover:bg-gray-100 transition-colors border border-gray-200">
+							Oceania
+						</button>
+					</div>
+				</div>
+
+				{/* Destinations Count */}
+				<div class="mb-8">
+					<p class="text-gray-600 text-center">
+						Showing <strong>{destinations.length}</strong> destinations
+					</p>
+				</div>
+
+				{/* Destinations Grid */}
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+					{destinations.map((destination) => (
+						<DestinationCard destination={destination} />
+					))}
+				</div>
+			</div>
+		</section>
+
+		{/* CTA Section */}
+		<section class="bg-white py-16">
+			<div class="max-w-screen-xl mx-auto px-4 text-center">
+				<h2 class="text-3xl font-bold text-gray-900 mb-4">
+					Can't Find Your Destination?
+				</h2>
+				<p class="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+					We're constantly expanding our network. Contact us to learn about upcoming routes and destinations.
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4 justify-center">
+					<a
+						href="/book"
+						class="inline-flex items-center justify-center gap-2 bg-primary-600 hover:bg-primary-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
+					>
+						<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+						</svg>
+						Search Flights
+					</a>
+					<a
+						href="/about"
+						class="inline-flex items-center justify-center gap-2 bg-white border-2 border-gray-300 hover:border-gray-400 text-gray-700 font-semibold px-8 py-3 rounded-lg transition-colors"
+					>
+						Contact Us
+					</a>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<Footer />
+</Layout>
