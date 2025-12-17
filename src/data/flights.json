@@ -1,0 +1,293 @@
+[
+  {
+    "id": "FL001",
+    "flightNumber": "PF101",
+    "airline": "AIT Airways",
+    "origin": {
+      "code": "JFK",
+      "city": "New York",
+      "airport": "JFK International"
+    },
+    "destination": {
+      "code": "LHR",
+      "city": "London",
+      "airport": "Heathrow"
+    },
+    "departure": "2025-12-25T10:00:00Z",
+    "arrival": "2025-12-25T22:00:00Z",
+    "duration": "7h 0m",
+    "stops": 0,
+    "aircraft": "Boeing 787-9",
+    "classes": {
+      "economy": {
+        "available": 120,
+        "price": 450,
+        "amenities": ["Seat selection", "Meal included", "In-flight entertainment", "USB charging"]
+      },
+      "business": {
+        "available": 24,
+        "price": 2400,
+        "amenities": ["Lie-flat seats", "Premium dining", "Lounge access", "Priority boarding", "Extra baggage"]
+      },
+      "first": {
+        "available": 8,
+        "price": 5500,
+        "amenities": ["Private suites", "Chef service", "Chauffeur service", "Premium lounge", "Luxury amenities"]
+      }
+    }
+  },
+  {
+    "id": "FL002",
+    "flightNumber": "PF102",
+    "airline": "AIT Airways",
+    "origin": {
+      "code": "JFK",
+      "city": "New York",
+      "airport": "JFK International"
+    },
+    "destination": {
+      "code": "LHR",
+      "city": "London",
+      "airport": "Heathrow"
+    },
+    "departure": "2025-12-25T18:30:00Z",
+    "arrival": "2025-12-26T06:30:00Z",
+    "duration": "7h 0m",
+    "stops": 0,
+    "aircraft": "Airbus A350-900",
+    "classes": {
+      "economy": {
+        "available": 95,
+        "price": 470,
+        "amenities": ["Seat selection", "Meal included", "In-flight entertainment", "USB charging"]
+      },
+      "business": {
+        "available": 18,
+        "price": 2500,
+        "amenities": ["Lie-flat seats", "Premium dining", "Lounge access", "Priority boarding", "Extra baggage"]
+      },
+      "first": {
+        "available": 6,
+        "price": 5800,
+        "amenities": ["Private suites", "Chef service", "Chauffeur service", "Premium lounge", "Luxury amenities"]
+      }
+    }
+  },
+  {
+    "id": "FL003",
+    "flightNumber": "PF201",
+    "airline": "AIT Airways",
+    "origin": {
+      "code": "JFK",
+      "city": "New York",
+      "airport": "JFK International"
+    },
+    "destination": {
+      "code": "CDG",
+      "city": "Paris",
+      "airport": "Charles de Gaulle"
+    },
+    "departure": "2025-12-25T20:00:00Z",
+    "arrival": "2025-12-26T09:30:00Z",
+    "duration": "7h 30m",
+    "stops": 0,
+    "aircraft": "Boeing 777-300ER",
+    "classes": {
+      "economy": {
+        "available": 150,
+        "price": 480,
+        "amenities": ["Seat selection", "Meal included", "In-flight entertainment", "USB charging"]
+      },
+      "business": {
+        "available": 28,
+        "price": 2600,
+        "amenities": ["Lie-flat seats", "Premium dining", "Lounge access", "Priority boarding", "Extra baggage"]
+      },
+      "first": {
+        "available": 8,
+        "price": 5900,
+        "amenities": ["Private suites", "Chef service", "Chauffeur service", "Premium lounge", "Luxury amenities"]
+      }
+    }
+  },
+  {
+    "id": "FL004",
+    "flightNumber": "PF301",
+    "airline": "AIT Airways",
+    "origin": {
+      "code": "JFK",
+      "city": "New York",
+      "airport": "JFK International"
+    },
+    "destination": {
+      "code": "NRT",
+      "city": "Tokyo",
+      "airport": "Narita International"
+    },
+    "departure": "2025-12-25T13:00:00Z",
+    "arrival": "2025-12-26T17:00:00Z",
+    "duration": "14h 0m",
+    "stops": 0,
+    "aircraft": "Boeing 787-10",
+    "classes": {
+      "economy": {
+        "available": 180,
+        "price": 850,
+        "amenities": ["Seat selection", "Meal included", "In-flight entertainment", "USB charging"]
+      },
+      "business": {
+        "available": 32,
+        "price": 4200,
+        "amenities": ["Lie-flat seats", "Premium dining", "Lounge access", "Priority boarding", "Extra baggage"]
+      },
+      "first": {
+        "available": 10,
+        "price": 8500,
+        "amenities": ["Private suites", "Chef service", "Chauffeur service", "Premium lounge", "Luxury amenities"]
+      }
+    }
+  },
+  {
+    "id": "FL005",
+    "flightNumber": "PF401",
+    "airline": "AIT Airways",
+    "origin": {
+      "code": "JFK",
+      "city": "New York",
+      "airport": "JFK International"
+    },
+    "destination": {
+      "code": "DXB",
+      "city": "Dubai",
+      "airport": "Dubai International"
+    },
+    "departure": "2025-12-25T22:00:00Z",
+    "arrival": "2025-12-26T18:00:00Z",
+    "duration": "12h 0m",
+    "stops": 0,
+    "aircraft": "Airbus A380",
+    "classes": {
+      "economy": {
+        "available": 200,
+        "price": 650,
+        "amenities": ["Seat selection", "Meal included", "In-flight entertainment", "USB charging"]
+      },
+      "business": {
+        "available": 40,
+        "price": 3500,
+        "amenities": ["Lie-flat seats", "Premium dining", "Lounge access", "Priority boarding", "Extra baggage"]
+      },
+      "first": {
+        "available": 12,
+        "price": 7200,
+        "amenities": ["Private suites", "Chef service", "Chauffeur service", "Premium lounge", "Luxury amenities"]
+      }
+    }
+  },
+  {
+    "id": "FL006",
+    "flightNumber": "PF501",
+    "airline": "AIT Airways",
+    "origin": {
+      "code": "LAX",
+      "city": "Los Angeles",
+      "airport": "LAX International"
+    },
+    "destination": {
+      "code": "SIN",
+      "city": "Singapore",
+      "airport": "Changi Airport"
+    },
+    "departure": "2025-12-25T23:00:00Z",
+    "arrival": "2025-12-27T07:00:00Z",
+    "duration": "17h 0m",
+    "stops": 0,
+    "aircraft": "Airbus A350-1000",
+    "classes": {
+      "economy": {
+        "available": 140,
+        "price": 920,
+        "amenities": ["Seat selection", "Meal included", "In-flight entertainment", "USB charging"]
+      },
+      "business": {
+        "available": 36,
+        "price": 4800,
+        "amenities": ["Lie-flat seats", "Premium dining", "Lounge access", "Priority boarding", "Extra baggage"]
+      },
+      "first": {
+        "available": 8,
+        "price": 9500,
+        "amenities": ["Private suites", "Chef service", "Chauffeur service", "Premium lounge", "Luxury amenities"]
+      }
+    }
+  },
+  {
+    "id": "FL007",
+    "flightNumber": "PF103",
+    "airline": "AIT Airways",
+    "origin": {
+      "code": "JFK",
+      "city": "New York",
+      "airport": "JFK International"
+    },
+    "destination": {
+      "code": "LHR",
+      "city": "London",
+      "airport": "Heathrow"
+    },
+    "departure": "2025-12-25T14:00:00Z",
+    "arrival": "2025-12-26T02:00:00Z",
+    "duration": "7h 0m",
+    "stops": 0,
+    "aircraft": "Boeing 787-9",
+    "classes": {
+      "economy": {
+        "available": 85,
+        "price": 460,
+        "amenities": ["Seat selection", "Meal included", "In-flight entertainment", "USB charging"]
+      },
+      "business": {
+        "available": 20,
+        "price": 2450,
+        "amenities": ["Lie-flat seats", "Premium dining", "Lounge access", "Priority boarding", "Extra baggage"]
+      },
+      "first": {
+        "available": 6,
+        "price": 5600,
+        "amenities": ["Private suites", "Chef service", "Chauffeur service", "Premium lounge", "Luxury amenities"]
+      }
+    }
+  },
+  {
+    "id": "FL008",
+    "flightNumber": "PF202",
+    "airline": "AIT Airways",
+    "origin": {
+      "code": "LHR",
+      "city": "London",
+      "airport": "Heathrow"
+    },
+    "destination": {
+      "code": "CDG",
+      "city": "Paris",
+      "airport": "Charles de Gaulle"
+    },
+    "departure": "2025-12-25T10:00:00Z",
+    "arrival": "2025-12-25T12:30:00Z",
+    "duration": "1h 30m",
+    "stops": 0,
+    "aircraft": "Airbus A320",
+    "classes": {
+      "economy": {
+        "available": 120,
+        "price": 120,
+        "amenities": ["Seat selection", "Snacks available", "USB charging"]
+      },
+      "business": {
+        "available": 16,
+        "price": 350,
+        "amenities": ["Premium seats", "Light meal", "Lounge access", "Priority boarding"]
+      }
+    }
+  }
+]

@@ -1,0 +1,140 @@
+[
+  {
+    "slug": "london",
+    "name": "London",
+    "country": "United Kingdom",
+    "continent": "Europe",
+    "description": "Experience the perfect blend of history and modernity in one of the world's most iconic cities.",
+    "image": "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=800&q=80",
+    "hero_image": "https://images.unsplash.com/photo-1513635269975-59663e0ac1ad?w=1920&q=80",
+    "starting_price": 450,
+    "popular": true,
+    "featured": true,
+    "airports": ["LHR", "LGW", "STN"],
+    "highlights": [
+      "Tower of London & Crown Jewels",
+      "British Museum",
+      "West End Theatre Shows",
+      "Buckingham Palace",
+      "London Eye"
+    ],
+    "best_time_to_visit": "May to September",
+    "flight_time": "7h from NYC",
+    "weekly_flights": 14
+  },
+  {
+    "slug": "paris",
+    "name": "Paris",
+    "country": "France",
+    "continent": "Europe",
+    "description": "The City of Light awaits with its timeless elegance, world-class cuisine, and artistic heritage.",
+    "image": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800&q=80",
+    "hero_image": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=1920&q=80",
+    "starting_price": 480,
+    "popular": true,
+    "featured": true,
+    "airports": ["CDG", "ORY"],
+    "highlights": [
+      "Eiffel Tower",
+      "Louvre Museum",
+      "Notre-Dame Cathedral",
+      "Champs-Élysées",
+      "Montmartre"
+    ],
+    "best_time_to_visit": "April to June, September to October",
+    "flight_time": "7.5h from NYC",
+    "weekly_flights": 10
+  },
+  {
+    "slug": "tokyo",
+    "name": "Tokyo",
+    "country": "Japan",
+    "continent": "Asia",
+    "description": "A mesmerizing fusion of ancient traditions and cutting-edge technology in Japan's dynamic capital.",
+    "image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800&q=80",
+    "hero_image": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=1920&q=80",
+    "starting_price": 850,
+    "popular": true,
+    "featured": true,
+    "airports": ["NRT", "HND"],
+    "highlights": [
+      "Senso-ji Temple",
+      "Tokyo Skytree",
+      "Shibuya Crossing",
+      "Tsukiji Fish Market",
+      "Imperial Palace"
+    ],
+    "best_time_to_visit": "March to May, September to November",
+    "flight_time": "14h from NYC",
+    "weekly_flights": 7
+  },
+  {
+    "slug": "dubai",
+    "name": "Dubai",
+    "country": "United Arab Emirates",
+    "continent": "Middle East",
+    "description": "A glittering metropolis of superlatives, where luxury meets desert adventure.",
+    "image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80",
+    "hero_image": "https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=1920&q=80",
+    "starting_price": 650,
+    "popular": true,
+    "featured": true,
+    "airports": ["DXB"],
+    "highlights": [
+      "Burj Khalifa",
+      "Dubai Mall",
+      "Palm Jumeirah",
+      "Desert Safari",
+      "Dubai Marina"
+    ],
+    "best_time_to_visit": "November to March",
+    "flight_time": "12h from NYC",
+    "weekly_flights": 12
+  },
+  {
+    "slug": "singapore",
+    "name": "Singapore",
+    "country": "Singapore",
+    "continent": "Asia",
+    "description": "A garden city where East meets West, offering world-class dining and stunning architecture.",
+    "image": "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=800&q=80",
+    "hero_image": "https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=1920&q=80",
+    "starting_price": 920,
+    "popular": true,
+    "featured": false,
+    "airports": ["SIN"],
+    "highlights": [
+      "Marina Bay Sands",
+      "Gardens by the Bay",
+      "Sentosa Island",
+      "Chinatown",
+      "Hawker Centers"
+    ],
+    "best_time_to_visit": "February to April",
+    "flight_time": "18h from NYC",
+    "weekly_flights": 5
+  },
+  {
+    "slug": "sydney",
+    "name": "Sydney",
+    "country": "Australia",
+    "continent": "Oceania",
+    "description": "Australia's harbour city combines stunning beaches, iconic landmarks, and vibrant culture.",
+    "image": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=800&q=80",
+    "hero_image": "https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9?w=1920&q=80",
+    "starting_price": 1100,
+    "popular": false,
+    "featured": false,
+    "airports": ["SYD"],
+    "highlights": [
+      "Sydney Opera House",
+      "Harbour Bridge",
+      "Bondi Beach",
+      "Taronga Zoo",
+      "The Rocks"
+    ],
+    "best_time_to_visit": "September to November, March to May",
+    "flight_time": "21h from NYC",
+    "weekly_flights": 4
+  }
+]
