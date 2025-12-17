@@ -1,0 +1,90 @@
+---
+import { Image } from 'astro:assets';
+import destinationsData from '../../data/destinations.json';
+import type { Destination } from '../../types/destination';
+import { getLanguageFromCookie, getTranslations } from '../../i18n/utils';
+
+const lang = getLanguageFromCookie(Astro.request.headers.get('cookie') || '');
+const t = getTranslations(lang);
+
+const featuredDestinations = (destinationsData as Destination[]).filter(d => d.featured);
+---
+
+<section class="py-16 bg-gray-50">
+	<div class="max-w-screen-xl mx-auto px-4">
+		<!-- Section Header -->
+		<div class="text-center mb-12">
+			<h2 class="text-4xl font-bold text-gray-900 mb-4">
+				{t.destinations.title}
+			</h2>
+			<p class="text-lg text-gray-600 max-w-2xl mx-auto">
+				{t.destinations.subtitle}
+			</p>
+		</div>
+
+		<!-- Destinations Grid -->
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+			{featuredDestinations.map((destination) => (
+				<a
+					href={`/destinations/${destination.slug}`}
+					class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+				>
+					<div class="relative h-80">
+						<Image
+							src={destination.image}
+							alt={destination.name}
+							width={400}
+							height={320}
+							format="webp"
+							quality={85}
+							loading="lazy"
+							class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+						/>
+						<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+
+						<!-- Content -->
+						<div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+							<h3 class="text-2xl font-bold mb-2">{destination.name}</h3>
+							<p class="text-sm text-gray-200 mb-3">{destination.country}</p>
+
+							<div class="flex items-center justify-between">
+								<div>
+									<p class="text-xs text-gray-300">{t.destinations.from}</p>
+									<p class="text-2xl font-bold text-accent-400">
+										${destination.starting_price}
+									</p>
+								</div>
+								<div class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-lg">
+									<p class="text-xs">{t.destinations.flightsPerWeek}</p>
+									<p class="text-lg font-semibold">{destination.weekly_flights}</p>
+								</div>
+							</div>
+						</div>
+
+						<!-- Popular Badge -->
+						{destination.popular && (
+							<div class="absolute top-4 right-4">
+								<span class="bg-accent-500 text-white text-xs font-semibold px-3 py-1 rounded-full">
+									{t.destinations.popular}
+								</span>
+							</div>
+						)}
+					</div>
+				</a>
+			))}
+		</div>
+
+		<!-- View All Button -->
+		<div class="text-center">
+			<a
+				href="/destinations"
+				class="inline-flex items-center gap-2 bg-primary-600 hover:bg-primary-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
+			>
+				{t.destinations.viewAll}
+				<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+				</svg>
+			</a>
+		</div>
+	</div>
+</section>
