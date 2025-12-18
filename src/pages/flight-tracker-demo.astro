@@ -1,0 +1,294 @@
+---
+import Layout from '../layouts/Layout.astro';
+import FlightTracker from '../components/booking/FlightTracker.jsx';
+---
+
+<Layout title="Flight Tracker Demo - AIT Airways">
+  <div class="min-h-screen bg-gray-50 py-12">
+    <div class="container mx-auto px-4">
+      {/* Page Header */}
+      <div class="max-w-5xl mx-auto mb-12">
+        <div class="mb-6">
+          <a href="/interactive-demos" class="inline-flex items-center text-sm text-gray-600 hover:text-gray-900 mb-4">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+            </svg>
+            Back to Demos
+          </a>
+        </div>
+
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          Real-time Flight Tracker
+        </h1>
+        <p class="text-lg text-gray-600 mb-6">
+          Live flight monitoring with animated visualizations and real-time metrics
+        </p>
+
+        <div class="inline-flex items-center gap-3 px-4 py-3 bg-white border border-gray-200 rounded-lg">
+          <div class="w-2 h-2 bg-gray-900 rounded-full animate-pulse"></div>
+          <span class="text-sm font-medium text-gray-700">Live Tracking Active</span>
+        </div>
+      </div>
+
+      {/* Flight Tracker Component */}
+      <div class="max-w-5xl mx-auto mb-12">
+        <FlightTracker
+          client:load
+          flightNumber="AIT 737"
+          origin="Jakarta"
+          originCode="CGK"
+          destination="Bali"
+          destinationCode="DPS"
+          departureTime="10:00"
+          arrivalTime="13:00"
+          distance={1150}
+          autoPlay={true}
+        />
+      </div>
+
+      {/* Features showcase */}
+      <div class="max-w-5xl mx-auto">
+        <div class="bg-white border border-gray-200 rounded-lg p-8">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">Technical Features</h2>
+
+          <div class="grid md:grid-cols-3 gap-8">
+            <div class="space-y-6">
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-3">Real-time Animation</h3>
+                <ul class="space-y-2 text-sm text-gray-600">
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Animated flight path visualization</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Live altitude and speed tracking</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Smooth progress transitions</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Dynamic weather updates</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-3">Live Metrics</h3>
+                <ul class="space-y-2 text-sm text-gray-600">
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Real-time altitude (0-37,000 ft)</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Ground speed (0-850 km/h)</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Distance traveled tracking</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Time remaining calculation</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="space-y-6">
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-3">Interactive Controls</h3>
+                <ul class="space-y-2 text-sm text-gray-600">
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Play and pause simulation</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Reset to beginning</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Auto-play on load</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Responsive controls</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-3">Flight Phases</h3>
+                <ul class="space-y-2 text-sm text-gray-600">
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Scheduled (pre-flight)</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Boarding (gate)</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Departed (takeoff)</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>In-Flight (cruising)</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Landing and Arrived</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="space-y-6">
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-3">Event Timeline</h3>
+                <ul class="space-y-2 text-sm text-gray-600">
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Timestamped events log</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Auto-scrolling timeline</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Status color coding</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Last 10 events display</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-3">Visual Design</h3>
+                <ul class="space-y-2 text-sm text-gray-600">
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Clean interface design</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Smooth SVG animations</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Color-coded status badges</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Progress indicators</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Technical highlights */}
+          <div class="mt-12 pt-8 border-t border-gray-200">
+            <h3 class="font-semibold text-gray-900 mb-6">Technical Implementation</h3>
+            <div class="grid md:grid-cols-2 gap-6">
+              <div class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+                <h4 class="text-sm font-semibold text-gray-900 mb-2">State Management</h4>
+                <p class="text-sm text-gray-600">
+                  Complex state orchestration using React hooks managing flight progress, altitude,
+                  speed, weather, events, and playback controls.
+                </p>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+                <h4 class="text-sm font-semibold text-gray-900 mb-2">Performance</h4>
+                <p class="text-sm text-gray-600">
+                  Optimized rendering with 100ms interval updates, memoized calculations for flight
+                  path positioning, and efficient event logging.
+                </p>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+                <h4 class="text-sm font-semibold text-gray-900 mb-2">Animations</h4>
+                <p class="text-sm text-gray-600">
+                  SVG path animations for flight trajectory, CSS transitions for progress bars,
+                  and bouncing airplane with rotation effects.
+                </p>
+              </div>
+              <div class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+                <h4 class="text-sm font-semibold text-gray-900 mb-2">Data Visualization</h4>
+                <p class="text-sm text-gray-600">
+                  Real-time metrics with animated progress bars, curved flight path using SVG
+                  quadratic bezier curves, and dynamic positioning.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Code info */}
+        <div class="mt-6 bg-gray-50 border border-gray-200 rounded-lg p-4">
+          <div class="flex items-center justify-between text-sm">
+            <span class="font-mono text-gray-600">src/components/booking/FlightTracker.jsx</span>
+            <span class="text-gray-500">500+ lines of React code</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

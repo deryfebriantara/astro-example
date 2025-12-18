@@ -1,0 +1,264 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Interactive Demos - Heavy Interactivity Examples">
+  <div class="min-h-screen bg-white">
+    {/* Hero Section */}
+    <div class="border-b border-gray-200 bg-gray-50">
+      <div class="container mx-auto px-4 py-16">
+        <div class="max-w-4xl">
+          <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Interactive Demos
+          </h1>
+          <p class="text-xl text-gray-600 mb-6">
+            Advanced interactive components showcasing React state management and complex user interactions
+          </p>
+          <div class="flex flex-wrap gap-3">
+            <span class="px-4 py-2 bg-white border border-gray-300 rounded-md text-sm font-medium text-gray-700">React 19</span>
+            <span class="px-4 py-2 bg-white border border-gray-300 rounded-md text-sm font-medium text-gray-700">Tailwind CSS</span>
+            <span class="px-4 py-2 bg-white border border-gray-300 rounded-md text-sm font-medium text-gray-700">Astro Islands</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {/* Demos Grid */}
+    <div class="container mx-auto px-4 py-16">
+      <div class="max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 gap-8">
+          {/* Seat Selection Demo */}
+          <a href="/seat-selection-demo" class="group block">
+            <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:border-gray-300 hover:shadow-lg transition-all duration-200">
+              {/* Card Header */}
+              <div class="p-6 border-b border-gray-200">
+                <div class="flex items-start justify-between mb-3">
+                  <div>
+                    <h2 class="text-xl font-bold text-gray-900 mb-1">Seat Selection</h2>
+                    <p class="text-sm text-gray-600">Interactive airline seat picker</p>
+                  </div>
+                  <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded">Demo 1</span>
+                </div>
+              </div>
+
+              {/* Card Body */}
+              <div class="p-6">
+                <h3 class="text-sm font-semibold text-gray-900 mb-3">Features</h3>
+                <ul class="space-y-2 text-sm text-gray-600 mb-6">
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Click and drag seat selection</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Boeing 737-800 layout (180+ seats)</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Real-time pricing calculation</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Automatic passenger assignment</span>
+                  </li>
+                </ul>
+
+                <div class="flex items-center justify-between pt-4 border-t border-gray-200">
+                  <span class="text-xs text-gray-500">180+ interactive elements</span>
+                  <div class="flex items-center gap-2 text-gray-900 font-medium group-hover:gap-3 transition-all">
+                    <span class="text-sm">View Demo</span>
+                    <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              {/* Tech Tags */}
+              <div class="px-6 pb-6 flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded">Complex State</span>
+                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded">Drag & Drop</span>
+                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded">Live Pricing</span>
+              </div>
+            </div>
+          </a>
+
+          {/* Flight Tracker Demo */}
+          <a href="/flight-tracker-demo" class="group block">
+            <div class="bg-white border border-gray-200 rounded-lg overflow-hidden hover:border-gray-300 hover:shadow-lg transition-all duration-200">
+              {/* Card Header */}
+              <div class="p-6 border-b border-gray-200">
+                <div class="flex items-start justify-between mb-3">
+                  <div>
+                    <h2 class="text-xl font-bold text-gray-900 mb-1">Flight Tracker</h2>
+                    <p class="text-sm text-gray-600">Real-time flight monitoring</p>
+                  </div>
+                  <span class="px-2 py-1 bg-gray-100 text-gray-600 text-xs font-medium rounded">Demo 2</span>
+                </div>
+              </div>
+
+              {/* Card Body */}
+              <div class="p-6">
+                <h3 class="text-sm font-semibold text-gray-900 mb-3">Features</h3>
+                <ul class="space-y-2 text-sm text-gray-600 mb-6">
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Animated flight path visualization</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Live altitude and speed tracking</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Event timeline with timestamps</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Interactive playback controls</span>
+                  </li>
+                </ul>
+
+                <div class="flex items-center justify-between pt-4 border-t border-gray-200">
+                  <span class="text-xs text-gray-500">500+ lines of code</span>
+                  <div class="flex items-center gap-2 text-gray-900 font-medium group-hover:gap-3 transition-all">
+                    <span class="text-sm">View Demo</span>
+                    <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+
+              {/* Tech Tags */}
+              <div class="px-6 pb-6 flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded">SVG Animation</span>
+                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded">Live Updates</span>
+                <span class="px-3 py-1 bg-gray-100 text-gray-700 text-xs font-medium rounded">Auto-play</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        {/* Stats Section */}
+        <div class="mt-16 bg-white border border-gray-200 rounded-lg p-8 md:p-12">
+          <h2 class="text-2xl font-bold text-gray-900 mb-8">
+            Technical Specifications
+          </h2>
+
+          <div class="grid md:grid-cols-4 gap-6">
+            <div class="text-center p-6 bg-gray-50 rounded-lg border border-gray-200">
+              <div class="text-4xl font-bold text-gray-900 mb-2">680+</div>
+              <div class="text-sm font-medium text-gray-600">Lines of React Code</div>
+            </div>
+
+            <div class="text-center p-6 bg-gray-50 rounded-lg border border-gray-200">
+              <div class="text-4xl font-bold text-gray-900 mb-2">180+</div>
+              <div class="text-sm font-medium text-gray-600">Interactive Elements</div>
+            </div>
+
+            <div class="text-center p-6 bg-gray-50 rounded-lg border border-gray-200">
+              <div class="text-4xl font-bold text-gray-900 mb-2">15+</div>
+              <div class="text-sm font-medium text-gray-600">React Hooks Used</div>
+            </div>
+
+            <div class="text-center p-6 bg-gray-50 rounded-lg border border-gray-200">
+              <div class="text-4xl font-bold text-gray-900 mb-2">100ms</div>
+              <div class="text-sm font-medium text-gray-600">Update Intervals</div>
+            </div>
+          </div>
+
+          {/* Technical details */}
+          <div class="mt-12 grid md:grid-cols-3 gap-6">
+            <div class="bg-white rounded-lg p-6 border border-gray-200">
+              <h3 class="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                <svg class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                </svg>
+                State Management
+              </h3>
+              <p class="text-sm text-gray-600">
+                Complex state orchestration using React hooks for managing selections, animations,
+                and real-time data updates.
+              </p>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 border border-gray-200">
+              <h3 class="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                <svg class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path fill-rule="evenodd" d="M4 2a2 2 0 00-2 2v11a3 3 0 106 0V4a2 2 0 00-2-2H4zm1 14a1 1 0 100-2 1 1 0 000 2zm5-1.757l4.9-4.9a2 2 0 000-2.828L13.485 5.1a2 2 0 00-2.828 0L10 5.757v8.486zM16 18H9.071l6-6H16a2 2 0 012 2v2a2 2 0 01-2 2z" clip-rule="evenodd"/>
+                </svg>
+                Animations
+              </h3>
+              <p class="text-sm text-gray-600">
+                SVG path animations, CSS transitions, and smooth real-time updates for enhanced
+                user experience.
+              </p>
+            </div>
+
+            <div class="bg-white rounded-lg p-6 border border-gray-200">
+              <h3 class="font-semibold text-gray-900 mb-3 flex items-center gap-2">
+                <svg class="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z"/>
+                </svg>
+                Performance
+              </h3>
+              <p class="text-sm text-gray-600">
+                Optimized rendering with efficient re-renders, memoized calculations, and
+                smooth 100ms update intervals.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div class="mt-12 bg-gray-900 rounded-lg shadow-xl p-8 md:p-12 text-white">
+          <h2 class="text-2xl font-bold mb-4">Explore Interactive Demos</h2>
+          <p class="text-gray-300 mb-8 max-w-2xl">
+            Each demo includes full source code and detailed implementation examples.
+            Click on any card above to see the components in action.
+          </p>
+          <div class="flex flex-wrap gap-4">
+            <a href="/seat-selection-demo" class="px-6 py-3 bg-white text-gray-900 font-semibold rounded-lg hover:bg-gray-100 transition-colors">
+              Seat Selection Demo
+            </a>
+            <a href="/flight-tracker-demo" class="px-6 py-3 bg-gray-800 text-white font-semibold rounded-lg hover:bg-gray-700 transition-colors border border-gray-700">
+              Flight Tracker Demo
+            </a>
+          </div>
+        </div>
+
+        {/* Code locations */}
+        <div class="mt-8 bg-gray-50 border border-gray-200 rounded-lg p-6">
+          <h3 class="text-sm font-semibold mb-3 text-gray-900">Component Locations</h3>
+          <div class="space-y-2 text-sm font-mono">
+            <div class="flex items-start gap-2 text-gray-600">
+              <span class="text-gray-400">1.</span>
+              <span>src/components/booking/SeatSelection.jsx</span>
+            </div>
+            <div class="flex items-start gap-2 text-gray-600">
+              <span class="text-gray-400">2.</span>
+              <span>src/components/booking/FlightTracker.jsx</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

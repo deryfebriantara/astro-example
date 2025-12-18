@@ -1,0 +1,190 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SeatSelection from '../components/booking/SeatSelection.jsx';
+---
+
+<Layout title="Seat Selection Demo - AIT Airways">
+  <div class="min-h-screen bg-gray-50 py-12">
+    <div class="container mx-auto px-4">
+      {/* Page Header */}
+      <div class="max-w-4xl mx-auto mb-12">
+        <div class="mb-6">
+          <a href="/interactive-demos" class="inline-flex items-center text-sm text-gray-600 hover:text-gray-900 mb-4">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+            </svg>
+            Back to Demos
+          </a>
+        </div>
+
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          Interactive Seat Selection
+        </h1>
+        <p class="text-lg text-gray-600 mb-6">
+          Boeing 737-800 seating layout with real-time selection and dynamic pricing
+        </p>
+
+        <div class="inline-flex items-center gap-3 px-4 py-3 bg-white border border-gray-200 rounded-lg">
+          <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+            <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z"/>
+          </svg>
+          <span class="text-sm font-medium text-gray-700">Flight AIT 737</span>
+          <span class="text-gray-300">•</span>
+          <span class="text-sm text-gray-600">Jakarta (CGK) → Bali (DPS)</span>
+        </div>
+      </div>
+
+      {/* Seat Selection Component */}
+      <div class="max-w-4xl mx-auto mb-12">
+        <SeatSelection
+          client:only="react"
+          passengers={2}
+          onSeatsSelected={(seats) => {
+            console.log('Selected seats:', seats);
+          }}
+        />
+      </div>
+
+      {/* Features showcase */}
+      <div class="max-w-4xl mx-auto">
+        <div class="bg-white border border-gray-200 rounded-lg p-8">
+          <h2 class="text-2xl font-bold text-gray-900 mb-6">Technical Features</h2>
+
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="space-y-6">
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-3">Interactivity</h3>
+                <ul class="space-y-2 text-sm text-gray-600">
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Click to select and deselect seats</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Drag to select multiple seats</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Hover effects with visual feedback</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Real-time passenger assignment</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-3">Seat Configuration</h3>
+                <ul class="space-y-2 text-sm text-gray-600">
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Business Class (rows 1-4)</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Economy Plus (extra legroom)</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Exit Row (emergency exit)</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Standard Economy</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="space-y-6">
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-3">Dynamic Pricing</h3>
+                <ul class="space-y-2 text-sm text-gray-600">
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Real-time price calculation</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Different pricing per seat type</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Clear breakdown of fees</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Total cost display</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <h3 class="font-semibold text-gray-900 mb-3">State Management</h3>
+                <ul class="space-y-2 text-sm text-gray-600">
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Complex state with React hooks</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Occupied seats tracking</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Selection limits enforcement</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <svg class="w-4 h-4 text-gray-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    <span>Passenger-to-seat mapping</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Code info */}
+        <div class="mt-6 bg-gray-50 border border-gray-200 rounded-lg p-4">
+          <div class="flex items-center justify-between text-sm">
+            <span class="font-mono text-gray-600">src/components/booking/SeatSelection.jsx</span>
+            <span class="text-gray-500">React 19 + Tailwind CSS</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>

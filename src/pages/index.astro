@@ -16,6 +16,78 @@ import WhyChooseUs from '../components/home/WhyChooseUs.astro';
 	<main>
 		<Hero />
 		<WhyChooseUs />
+
+		<!-- Interactive Demos Section -->
+		<section class="py-16 bg-gray-50">
+			<div class="max-w-screen-xl mx-auto px-4">
+				<div class="text-center mb-12">
+					<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+						Interactive Demos
+					</h2>
+					<p class="text-lg text-gray-600 max-w-2xl mx-auto">
+						Experience our advanced booking features with real-time interactivity
+					</p>
+				</div>
+
+				<div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+					<!-- Seat Selection Demo -->
+					<a href="/seat-selection-demo" class="group bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
+						<div class="p-6">
+							<div class="flex items-center gap-3 mb-4">
+								<div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center group-hover:bg-gray-200 transition-colors">
+									<svg class="w-6 h-6 text-gray-700" fill="currentColor" viewBox="0 0 20 20">
+										<path d="M10 3.5a1.5 1.5 0 013 0V4a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-.5a1.5 1.5 0 000 3h.5a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-.5a1.5 1.5 0 00-3 0v.5a1 1 0 01-1 1H6a1 1 0 01-1-1v-3a1 1 0 00-1-1h-.5a1.5 1.5 0 010-3H4a1 1 0 001-1V6a1 1 0 011-1h3a1 1 0 001-1v-.5z" />
+									</svg>
+								</div>
+								<h3 class="text-xl font-bold text-gray-900">Seat Selection</h3>
+							</div>
+							<p class="text-gray-600 mb-4">
+								Interactive airline seat picker with real-time selection, drag-to-select functionality, and dynamic pricing for different seat types.
+							</p>
+							<div class="flex items-center text-sm text-gray-700 font-medium group-hover:text-gray-900">
+								Try it now
+								<svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+								</svg>
+							</div>
+						</div>
+					</a>
+
+					<!-- Flight Tracker Demo -->
+					<a href="/flight-tracker-demo" class="group bg-white rounded-xl border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
+						<div class="p-6">
+							<div class="flex items-center gap-3 mb-4">
+								<div class="w-12 h-12 bg-gray-100 rounded-lg flex items-center justify-center group-hover:bg-gray-200 transition-colors">
+									<svg class="w-6 h-6 text-gray-700" fill="currentColor" viewBox="0 0 20 20">
+										<path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
+									</svg>
+								</div>
+								<h3 class="text-xl font-bold text-gray-900">Flight Tracker</h3>
+							</div>
+							<p class="text-gray-600 mb-4">
+								Real-time flight tracking with animated visualization, live altitude and speed tracking, and detailed event timeline.
+							</p>
+							<div class="flex items-center text-sm text-gray-700 font-medium group-hover:text-gray-900">
+								Try it now
+								<svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+								</svg>
+							</div>
+						</div>
+					</a>
+				</div>
+
+				<div class="text-center mt-8">
+					<a href="/interactive-demos" class="inline-flex items-center gap-2 text-gray-700 hover:text-gray-900 font-medium">
+						View all interactive demos
+						<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+						</svg>
+					</a>
+				</div>
+			</div>
+		</section>
+
 		<FeaturedDestinations />
 
 		<!-- Promotional Banner -->
